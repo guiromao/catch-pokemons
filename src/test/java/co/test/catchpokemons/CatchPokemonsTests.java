@@ -12,8 +12,6 @@ import static co.catchpokemons.CatchPokemons.*;
 @RunWith(JUnitParamsRunner.class)
 public class CatchPokemonsTests {
 
-
-
     /**
      * Invalid directions should be valued as such
      * @param dir
