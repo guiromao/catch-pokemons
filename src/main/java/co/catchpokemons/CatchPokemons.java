@@ -27,7 +27,7 @@ public class CatchPokemons {
     /**
      * Method that will count number of caught pokemons in a given string of directions
      * @param input string of directions
-     * @return
+     * @return string with the number of caught pokemons
      */
     private static String caughtPokemons(String input){
         String result;
@@ -46,7 +46,7 @@ public class CatchPokemons {
     /**
      * Counting new catches of Pokemons, based on new Coordinates visited
      * @param dir the string with the directions
-     * @return
+     * @return number of caught pokemons
      */
     public static long countCatches(String dir){
 
@@ -79,7 +79,7 @@ public class CatchPokemons {
      * Method will state if list of positions contains the coordinate passed in arguments
      * @param listPos List of positions visited
      * @param position position to check if contained in above list
-     * @return
+     * @return whether the current position is a newly visited one
      */
     private static boolean hasVisitedPos(List<Coordinate> listPos, Coordinate position){
         for(int i = 0; i < listPos.size(); i++){
@@ -93,7 +93,7 @@ public class CatchPokemons {
     /**
      * Removes spaces from the string of directions
      * @param string a string with the directions given
-     * @return
+     * @return direction's string without any spaces
      */
     private static String removeSpaces(String string){
         String result = "";
@@ -111,7 +111,7 @@ public class CatchPokemons {
     /**
      * Method will tell if all the directions given in the string are valid ones
      * @param directions string of directions
-     * @return
+     * @return whether the string of directions contains valid directions only
      */
     public static boolean areValidDirections(String directions){
         for(int i = 0; i < directions.length(); i++){
