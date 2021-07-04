@@ -12,12 +12,14 @@ import static co.catchpokemons.CatchPokemons.*;
 @RunWith(JUnitParamsRunner.class)
 public class CatchPokemonsTests {
 
+
+
     /**
      * Invalid directions should be valued as such
      * @param dir
      */
     @Test
-    @Parameters({"oens9", "nsesw", "nttta", "!!!"})
+    @Parameters({"1", "oens9", "nsesw", "nttta", "!!!"})
     public void makeSureMarkedAsInvalid(String dir){
         assertFalse(areValidDirections(dir.toUpperCase()));
     }
@@ -40,7 +42,7 @@ public class CatchPokemonsTests {
         assertEquals(0, countCatches(""));
         assertEquals(2, countCatches("E"));
         assertEquals(2, countCatches("NSNS"));
-        assertEquals(7, countCatches("ONONONSN"));
+        assertEquals(7, countCatches("ONON ONSN"));
         assertEquals(4, countCatches("OSNO"));
     }
 

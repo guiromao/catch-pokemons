@@ -12,16 +12,7 @@ public class CatchPokemons {
     private static final char WEST = 'O';
 
     public static void main(String[] args) {
-        System.out.println(caughtPokemons("E"));
-        System.out.println(caughtPokemons("NESO"));
-        System.out.println(caughtPokemons("NE    SO   "));
-        System.out.println(caughtPokemons("NSNSNSNSNS"));
-        System.out.println(caughtPokemons("N SNSNS NSNSOSSEE11"));
-
-        System.out.print("Write your own directions to Ash: ");
-        Scanner scanner = new Scanner(System.in);
-        String directions = scanner.nextLine();
-        System.out.println(caughtPokemons(directions));
+        System.out.println(caughtPokemons(args[0]));
     }
 
     /**
