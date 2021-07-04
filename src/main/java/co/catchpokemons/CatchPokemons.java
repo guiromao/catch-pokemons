@@ -75,12 +75,11 @@ public class CatchPokemons {
      * @return whether the current position is a newly visited one
      */
     private static boolean hasVisitedPos(List<Coordinate> listPos, Coordinate position){
-        for(Coordinate c: listPos){
-            if(c.isSamePos(position)){
-                return true;
-            }
-        }
-        return false;
+        return listPos.stream()
+                .filter((c) -> c.isSamePos(position))
+                .parallel()
+                .findAny()
+                .isPresent();
     }
 
     /**
