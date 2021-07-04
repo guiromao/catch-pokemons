@@ -12,7 +12,9 @@ public class CatchPokemons {
     private static final char WEST = 'O';
 
     public static void main(String[] args) {
-        System.out.println(caughtPokemons(args[0]));
+        String output = (args.length == 0) ? "Please write a set of directions so that Ash can catch Pokemons!" :
+                caughtPokemons(args[0]);
+        System.out.println(output);
     }
 
     /**
